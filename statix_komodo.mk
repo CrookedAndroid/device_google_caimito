@@ -21,12 +21,20 @@ $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 $(call inherit-product, device/google/zumapro/lineage_common.mk)
 $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
 
+# Blur
+TARGET_USES_BLUR := true
+
+# Launcher
+INCLUDE_PIXEL_LAUNCHER := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 9 Pro XL
 PRODUCT_NAME := statix_$(DEVICE_CODENAME)
 PRODUCT_DEVICE := komodo
 PRODUCT_MANUFACTURER := Google
+
+STATIX_BUILD_TYPE := OFFICIAL
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2992
