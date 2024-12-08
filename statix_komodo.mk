@@ -13,8 +13,6 @@ TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, vendor/statix/config/gsm.mk)
 
-include vendor/google/gms/Android.mk
-
 # Inherit device configuration
 DEVICE_CODENAME := komodo
 DEVICE_PATH := device/google/caimito
@@ -23,31 +21,18 @@ $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 $(call inherit-product, device/google/zumapro/lineage_common.mk)
 $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
 
-# Common GMS
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_CALL_RECORDING := true
+# Pixelparts
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+$(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
 
 # Pixel
-#TARGET_SUPPORTS_GOOGLE_BATTERY := true
-#TARGET_SUPPORTS_ADPATIVE_CHARGING := true
-TARGET_SUPPORTS_GOOGLE_CAMERA := true
-TARGET_GOOGLE_CAMERA_LARGE_RAM := true
-TARGET_SUPPORTS_DREAMLINER := true
-TARGET_SUPPORTS_SATELLITE_SOS := true
-TARGET_PIXEL_EXPERIENCE_2022 := true
-TARGET_PIXEL_EXPERIENCE_2023 := true
-TARGET_PIXEL_EXPERIENCE_2024 := true
 TARGET_SUPPORTS_CLEAR_CALLING := true
-TARGET_SUPPORTS_PIXEL_SCREENSHOTS := true
-TARGET_SUPPORTS_PIXEL_STUDIO := true
 
 # Blur
 TARGET_USES_BLUR := true
 
 # Launcher
-INCLUDE_PIXEL_LAUNCHER := true
+INCLUDE_PIXEL_LAUNCHER := false
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
