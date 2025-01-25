@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-include $(DEVICE_PATH)/BoardConfigLineage.mk
+include device/google/caimito/BoardConfigLineage.mk
 
-include $(VENDOR_PATH)/BoardConfigVendor.mk
+include vendor/google/komodo/BoardConfigVendor.mk
