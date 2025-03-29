@@ -5,8 +5,8 @@
 #
 
 # Inherit some common StatiX stuff.
-$(call inherit-product, vendor/statix/config/common.mk)
-$(call inherit-product, vendor/statix/config/gsm.mk)
+$(call inherit-product, vendor/crooked/config/common.mk)
+$(call inherit-product, vendor/crooked/config/gsm.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/caimito/aosp_komodo.mk)
