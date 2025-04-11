@@ -13,12 +13,12 @@ $(call inherit-product, device/google/caimito/aosp_komodo.mk)
 
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
-$(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
+#$(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
 
 # Pixel Luancher
 INCLUDE_PIXEL_LAUNCHER := true
 
-STATIX_BUILD_TYPE := OFFICIAL
+CROOKED_BUILD_TYPE := OFFICIAL
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := statix_komodo
