@@ -16,7 +16,7 @@ $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 $(call inherit-product-if-exists, vendor/google/pixelparts/powershare/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := statix_caiman
+PRODUCT_NAME := crooked_caiman
 PRODUCT_MODEL := Pixel 9 Pro
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google

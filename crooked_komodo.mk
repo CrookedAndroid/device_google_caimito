@@ -21,7 +21,7 @@ INCLUDE_PIXEL_LAUNCHER := true
 CROOKED_BUILD_TYPE := OFFICIAL
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := statix_komodo
+PRODUCT_NAME := crooked_komodo
 PRODUCT_MODEL := Pixel 9 Pro XL
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
